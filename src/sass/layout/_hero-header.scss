@@ -1,0 +1,249 @@
+.container {
+  width: 1250px;
+  margin: 0 auto;
+
+  @media (max-width: 1440px) {
+    margin-left: 35px;
+    margin-right: 150px;
+  }
+  @media (max-width: 375px) {
+    width: 375px;
+    margin: 0;
+  }
+}
+
+.header__container {
+  display: flex;
+}
+.header__navigation {
+  margin-top: 10px;
+  @media (max-width: 375px) {
+    display: none;
+  }
+}
+.header__logo {
+  margin-right: 25px;
+}
+
+.header__list {
+  display: flex;
+  margin-top: 30px;
+
+  .header__link {
+    margin-right: 35px;
+
+    &--item {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.05em;
+      display: inline-block;
+      color: #3e4b64;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: #ddb04e;
+      }
+      &:after {
+        display: block;
+        content: '';
+        height: 2px;
+        width: 0%;
+        background-color: #ffeb3b;
+        transition: width 0.3s ease-in-out;
+      }
+      &:hover:after,
+      &:focus:after {
+        width: 100%;
+      }
+    }
+  }
+}
+.contact__link {
+  margin-left: 115px;
+  margin-right: 50px;
+
+  &--phone,
+  &--email {
+    position: relative;
+    z-index: 999;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    color: #ddb04e;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  &--email {
+    font-weight: 400;
+  }
+}
+
+.social__link {
+  margin-right: 10px;
+  z-index: 99999;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.social__link--item:hover,
+.social__link--item:focus {
+  transform: scale(1.4);
+  transition: 0.3s ease-in-out;
+}
+.hero__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.05em;
+  margin-top: 90px;
+  margin-left: 120px;
+  width: 437px;
+  height: 274px;
+  color: #3e4b64;
+  @media (max-width: 375px) {
+    width: 350px;
+    margin-left: 13px;
+    margin-top: 400px;
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+.hero__rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  @media (max-width: 1440px) {
+    position: absolute;
+    left: -250px;
+  }
+  @media (max-width: 375px) {
+    top: 400px;
+    left: 0;
+    z-index: 999;
+  }
+}
+.line {
+  position: absolute;
+  left: 0px;
+  top: 724px;
+  width: 600px;
+  height: 12px;
+  background: #ddb04e;
+
+  @media (max-width: 1440px) {
+    width: 365px;
+  }
+  @media (max-width: 375px) {
+    display: none;
+  }
+}
+
+.about {
+  position: absolute;
+  top: 0;
+  right: 0;
+  @media (max-width: 375px) {
+    z-index: -1;
+  }
+  &__bg {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 800px;
+    height: 600px;
+    background: #3e4b64;
+
+    @media (min-width: 2100px) {
+      width: 1100px;
+    }
+    @media (max-width: 1770px) {
+      width: 700px;
+    }
+    @media (max-width: 1600px) {
+      width: 650px;
+    }
+    @media (max-width: 1440px) {
+      width: 600px;
+    }
+    @media (max-width: 375px) {
+      top: 185px;
+      width: 375px;
+    }
+  }
+  &__keys {
+    position: absolute;
+    top: 135px;
+    left: -115px;
+    width: 550px;
+    height: 415px;
+    @media (max-width: 375px) {
+      left: 55px;
+      top: -68px;
+      width: 310px;
+      height: 340px;
+    }
+  }
+  &__dots {
+    position: absolute;
+    top: 160px;
+    right: 185px;
+    width: 370px;
+    height: 130px;
+
+    @media (max-width: 1440px) {
+      right: -80px;
+    }
+    @media (max-width: 375px) {
+      width: 310px;
+      height: 110px;
+      top: 125px;
+      right: 250px;
+    }
+  }
+  &__btn {
+    position: absolute;
+    bottom: 90px;
+    left: 115px;
+
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    line-height: 22px;
+    padding: 20px 75px;
+    background: #ddb04e;
+    color: #fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    &:hover,
+    &:focus {
+      border: 3px solid #ddb04e;
+      background: #fff;
+      color: #ddb04e;
+      transition: 0.3s ease-in-out;
+    }
+    @media (max-width: 375px) {
+      width: 350px;
+      bottom: -215px;
+      left: 12px;
+    }
+  }
+}
